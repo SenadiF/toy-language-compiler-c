@@ -2,7 +2,8 @@ CC=gcc
 CFLAGS=-Iinclude
 
 all:
-	$(CC) src/*.c main.c -o build/compiler $(CFLAGS)
+	
+	gcc src/*.c main.c -Iinclude -o build/compiler
 
 run:
 	./build/compiler
