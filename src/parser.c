@@ -29,6 +29,7 @@ ASTNode* create_node(ASTNodeType type, char *value) {
     // Initialize children to NULL
     node->left = NULL;
     node->right = NULL;
+    node->next = NULL;
 
     return node;
 }
@@ -169,7 +170,7 @@ ASTNode* parse_program(Parser *parser) {
             current = stmt;
         } else {
             // chain statements (simple linked structure)
-            current->right = stmt;
+            current->next = stmt;
             current = stmt;
         }
     }

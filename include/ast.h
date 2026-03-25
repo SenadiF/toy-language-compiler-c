@@ -20,6 +20,8 @@ typedef struct ASTNode {
     // left and right children (for tree)
     struct ASTNode *left;
     struct ASTNode *right;
+    //statements 
+    struct ASTNode *next; // for linking statements in a sequence
 } ASTNode;
 
 #endif 
